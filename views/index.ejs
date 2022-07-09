@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./extends/head.ejs') -%> 
+    <body>
+        <main>
+            <h1>Let's Listen</h1>
+
+            <p>Download videos from Youtube onto your device</p>
+
+            <form action="/youtube-download" method="POST">
+    
+                <input class="bg-dark text-white" type="text" name="url" id="url" placeholder="Paste Link Here" required>
+
+                <select class="form-select bg-dark" aria-label="Default select example" name="audioOrVideo" >
+                    <option value="video">Video</option>
+                    <option value="audio">Audio</option>
+                </select>
+    
+                <input class="btn bg-danger text-white" type="submit" value="Download Now">
+            </form>
+
+            <footer>
+                <a href="https://www.ronald-luo.com/100-websites/">
+                    <img src="https://s2.svgbox.net/social.svg?ic=ghost&color=fff" width="32" height="32">
+                </a>
+
+                <a href="https://github.com/ronald-luo/lets-listen">
+                    <img src="https://s2.svgbox.net/social.svg?ic=github&color=fff" width="32" height="32">
+                </a>
+            </footer>
+        </main>
+    </body>
+</html>

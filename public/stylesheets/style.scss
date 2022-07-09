@@ -1,0 +1,118 @@
+$tablet: 768px;
+$desktop: 1024px;
+
+@mixin tablet {
+    @media(min-width: #{$tablet}) {
+        @content
+    }
+};
+
+@mixin desktop {
+    @media(min-width: #{$desktop}) {
+        @content
+    }
+}
+
+;*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto";
+    background-color: #1C1C1C;
+    color: #ffffff;
+    height: 100%;
+    width: 100%;
+    overflow-y: none;
+    overflow-x: none;
+}
+
+main {
+    width: 375px;
+    margin: 0 auto 0 auto;
+    padding: 2em 1em;
+
+    @include tablet {
+        margin: 3em auto 0 auto;
+        width: 565px;
+    }
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    margin: 0.6em;
+}
+
+p {
+    font-size: 15px;
+    text-align: center;
+    line-height: 24px;
+    color: #9699b6;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+[type="text"] {
+    width: 100%;
+    height: 2.54em;
+    text-indent: 1em;
+    font-size: 1.1em;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    // box-shadow: 0 2px 3px rgb(0,0,0);
+    &::placeholder {
+        color: rgba(255,255,255, 0.3);
+    }
+}
+
+.form-select {
+    margin: 10px 0 0 0;
+    // background-color: #333333;
+    border-radius: 4px;
+    // box-shadow: 0 2px 3px rgb(0,0,0);
+    color: rgba(255,255,255, 0.3);
+    font-size: 1.1em;
+    text-indent: 0.5em;
+    border: none;
+
+    &::placeholder {
+        color: rgba(255,255,255, 0.3);
+    }
+}
+
+[type="submit"] {
+    height: 2.54em;
+    margin-top: 15px;
+
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    justify-self: center;
+
+    &:hover {
+        border: 1px solid white;
+    }
+}
+
+footer {
+    margin-top: 2em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    img {
+        margin: 10px;
+        border-radius: 15px;
+
+        &:hover {
+            transition: 0.3s;
+            filter: invert(0.8);
+        }
+    }
+}
